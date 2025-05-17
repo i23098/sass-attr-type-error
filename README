@@ -2,6 +2,8 @@
 
 Simple project do demonstrate error while trying to use attr with color type
 
+https://developer.chrome.com/blog/advanced-attr
+
 # Build
 
 To build the project, simply run:
@@ -11,3 +13,18 @@ To build the project, simply run:
 ```
 
 This will generate ```build/libs/sass-attr-type-error.war```. Can deploy it in Tomcat, for instance. Or, just unzip it and open ```index.html``` directly in browser.
+
+It won't actually build it and will get error:
+
+```
+ERROR in ./src/main/react-js/app.scss (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main/react-js/app.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+expected ")".
+  ╷
+3 │     color: attr(data-color type(<color>));
+  │                                 ^
+  ╵
+  src/main/react-js/app.scss 3:33  root stylesheet
+```
+
+If comment out line 11 in ```app.scss``` it will build and show box in black color instead of light blue

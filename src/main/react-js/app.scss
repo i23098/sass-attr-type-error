@@ -1,3 +1,12 @@
-body {
-    background-color: white;
+ select {
+    appearance: base-select;
+
+    &::picker(select) {
+        appearance: base-select; // the 'listbox'
+    }
+ }
+
+.option-with-color::before {
+    content: "\2BC0";
+    color: attr(data-color type(<color>));
 }
