@@ -1,3 +1,13 @@
 # SASS Error example
 
 Simple project do demonstrate error while trying to use attr with color type
+
+# Build
+
+To build the project, simply run:
+
+```sh
+./gradlew build
+```
+
+This will generate ```build/libs/sass-attr-type-error.war```. Can deploy it in Tomcat, for instance. Or, just unzip it and open ```index.html``` directly in browser.
